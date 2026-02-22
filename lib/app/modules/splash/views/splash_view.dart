@@ -8,11 +8,9 @@ class SplashView extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: Text(
-          "Movie Tracker",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+        child: Image(image: AssetImage('assets/images/logo.png'), width: 200),
       ),
     );
   }
