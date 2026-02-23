@@ -3,16 +3,16 @@ import 'package:get/get.dart';
 import 'package:imbr/app/routes/app_page.dart';
 import 'package:imbr/app/routes/app_routes.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Hive.initFlutter();
   await Hive.openBox('favorites');
+  await Hive.openBox('rated');
+  await Hive.openBox('watchlist');
 
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
